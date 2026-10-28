@@ -1,0 +1,25 @@
+/*Q24.
+Imagine a fun Chocolate Shop where a friendly Choco-Maker wants to know how much a chocolate treat costs. They have a special tool called the Chocolate Calculator. When kids pick their chocolates, the Choco-Maker puts in how many and the price for each. Your task is to make a program that quickly figures out how much the chocolates cost altogether.
+
+Input format:
+  - The first line is the number of chocolates a kid wants (a whole number).
+  - The second line is the cost of one chocolate (a number with decimals).
+
+Output format:
+  - The result is the total cost of all the chocolates (a number with one decimal number).
+
+Note: A partial code is provided in the editor.*/
+/////////////////////////////////////////////////////////////////////////////////
+/*Logic: The problem asks for one decimal place, so use %.1f.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int count = sc.nextInt();
+        double cost = sc.nextDouble();
+        System.out.printf("%.1f%n", count * cost);
+        sc.close();
+    }
+}
