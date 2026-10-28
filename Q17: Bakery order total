@@ -1,0 +1,27 @@
+/*Q17.
+In a busy bakery, the head pastry chef imagines a useful tool: a mindful Bakery Order Calculator. This application is designed to help quickly determine the total order cost for a customer. Picture a scene where the pastry chef records the amount and cost of each item from the customer. The Bakery Order Calculator quickly calculates the total cost and displays it.
+
+Now, picture yourself as the creator of this ingenious Bakery Order Calculator. Your mission is to guide the busy bakery maestro in crafting a Java program.
+
+Input format:
+  - The first line is the integer that represents the quantity of the item.
+  - The second line is a decimal value that represents the price of the item.
+
+Output format:
+  - The output is a decimal value that represents the total cost.
+
+Note: A partial code is provided in the editor.*/
+/////////////////////////////////////////////////////////////////
+/*Logic: total = quantity x price (int times double gives double).*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int quantity = sc.nextInt();
+        double price = sc.nextDouble();
+        System.out.println(quantity * price);
+        sc.close();
+    }
+}
