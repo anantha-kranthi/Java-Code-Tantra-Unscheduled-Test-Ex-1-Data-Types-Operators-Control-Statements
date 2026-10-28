@@ -1,0 +1,30 @@
+/*Q16.
+Imagine adventurers going on a big journey through two different worlds. They have a special Adventure Planner's Time Tracker to keep track of their time. They just need to tell the Tracker how many Earth days they spent on two different worlds.
+
+In this adventure, one day in World 1 is like 2 Earth days. But in World 2, one day is only half an Earth day.
+
+Your job is to figure out the total number of Earth days the adventurers spent traveling in both worlds.
+
+Input Format:
+  - The first line contains an integer representing the number of days spent in World 1.
+  - The second line contains an integer representing the number of days spent in World 2.
+
+Output Format:
+  - The result is the total Earth days as a decimal number that displays up to one decimal place.
+
+Note: A partial code is provided in the editor.*/
+///////////////////////////////////////////////////////////////////////////////////////
+/*Logic: 1 day in World 1 = 2 Earth days, 1 day in World 2 = 0.5. Print to one decimal place.*/
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int world1 = sc.nextInt();
+        int world2 = sc.nextInt();
+        double total = world1 * 2.0 + world2 * 0.5;
+        System.out.printf("%.1f%n", total);
+        sc.close();
+    }
+}
+
