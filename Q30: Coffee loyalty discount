@@ -1,0 +1,41 @@
+/*A local coffee shop has introduced a new loyalty program for its customers. The program offers discounts based on the total amount spent on coffee purchases.
+
+Write a Java program that calculates the total cost after applying discounts.
+
+Your task is to create a program that takes the total amount spent on coffee purchases as input and calculates the total cost according to the following criteria:
+  - If the total amount spent is less than $20: No discount.
+  - If the total amount spent is $20 - $50 (inclusive): 5% discount.
+  - If the total amount spent is more than $50 and up to $100 (inclusive): 10% discount.
+  - If the total amount spent is more than $100: 15% discount.
+
+Input Format:
+  - The program should take a single input, which is the total amount spent on coffee purchases (a decimal value).
+
+Output Format:
+  - The program should output the total cost after applying discounts based on the criteria mentioned above.*/
+/////////////////////////////////////////////////////////////////////////////////////////////
+/*Logic: Pick the discount tier, then subtract it. Boundaries: 20 to 50 inclusive is 5%, above 50 up to 100 inclusive is 10%.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double total = sc.nextDouble();
+
+        double discountPercent;
+        if (total < 20) {
+            discountPercent = 0;
+        } else if (total <= 50) {
+            discountPercent = 5;
+        } else if (total <= 100) {
+            discountPercent = 10;
+        } else {
+            discountPercent = 15;
+        }
+
+        double finalCost = total - (total * discountPercent / 100);
+        System.out.printf("%.2f%n", finalCost);
+        sc.close();
+    }
+}
