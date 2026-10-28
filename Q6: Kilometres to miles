@@ -1,0 +1,28 @@
+/*Q6.
+In the fitness domain, a dedicated trainer envisions a smart tool - a Distance Converter. Picture a fitness enthusiast completing a run, noting down the distance covered in kilometers. The trainer, with a nod, inputs the kilometers into the tool. Swiftly, the Distance Converter calculates the equivalent distance in miles, offering a new perspective on the runner's achievement.
+
+As the creator, your mission is to guide the trainer in crafting a Java program for this Distance Converter.
+
+Input Format:
+  - The input is a decimal value that represents the distance in kilometers.
+
+Output Format:
+  - The output is a decimal value that represents the distance in miles.
+
+Hint:
+  - 1 kilometer = 0.621371 miles
+
+Note: A partial code is provided in the editor.*/
+////////////////////////////////////////////////////////////////////////
+/*Logic: Multiply by the conversion factor.*/
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double km = sc.nextDouble();
+        double miles = km * 0.621371;
+        System.out.println(miles);
+        sc.close();
+    }
+}
