@@ -1,0 +1,25 @@
+/*Q21.
+Write a Java program that prompts the user to enter a single letter from the alphabet series and displays the preceding letter in the alphabet series.
+
+Input format:
+  - The input is a single letter from the alphabet series.
+
+Output format:
+  - The output is the preceding letter to the user-given letter.
+
+Note:
+  - Input character must be between letters B to Z or b to z.
+  - A partial code is provided in the editor.*/
+///////////////////////////////////////////////////////////////////////////
+/*Logic: Subtract 1 and cast back to char. Input is guaranteed B to Z or b to z.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        System.out.println((char) (ch - 1));
+        sc.close();
+    }
+}
