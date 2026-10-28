@@ -1,0 +1,23 @@
+/*Write a Java program that prompts the user for a float value and converts the given number of type float into integer data type.
+
+Input Format:
+  - The input is the floating point value.
+
+Output Format:
+  - The output is the integer after the data type conversion.
+
+Note: A partial code is provided in the editor.*/
+//////////////////////////////////////
+/* Logic: Casting truncates toward zero (7.9 gives 7, -7.9 gives -7).*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float f = sc.nextFloat();
+        int result = (int) f;          // explicit narrowing cast truncates the decimal part
+        System.out.println(result);
+        sc.close();
+    }
+}
