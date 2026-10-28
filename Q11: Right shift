@@ -1,0 +1,24 @@
+/*Q11.
+Liam, a data scientist, is developing a data compression algorithm that leverages bit wise right-shifting as a crucial step. In the compression process, integers are represented in a compressed form. To reconstruct the original data efficiently, Liam needs a program that performs the right shift operation on the compressed data. Can you help Liam by writing a Java program that takes the compressed data and the number of positions to right-shift, then outputs the recovered original data?
+
+Input format:
+  - The first line is the integer that represents compressed data.
+  - The second line is the integer that represents the number of positions to right-shift.
+
+Output format:
+  - The output is the integer that represents the shifted value.
+
+Note: A partial code is provided in the editor.*/
+/////////////////////////////////////////////////////
+/*Logic: >> is the signed right shift (it preserves the sign for negatives).*/
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int data = sc.nextInt();
+        int positions = sc.nextInt();
+        System.out.println(data >> positions);
+        sc.close();
+    }
+}
