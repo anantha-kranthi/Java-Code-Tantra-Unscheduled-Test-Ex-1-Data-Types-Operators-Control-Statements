@@ -1,0 +1,29 @@
+/*Q25.
+Alex is a teacher managing a programming course. He needs a program that helps him quickly assess whether a student has passed or failed based on their exam score. The passing score is 50. Write a Java program that takes a student's exam score as input and uses a ternary operator to determine and display whether the student has passed or failed.
+
+Input format:
+  - The input is the integer that represents the score.
+
+Output format:
+  - Print the input score and the corresponding result in the following format:
+
+    Score: <score>, Result: <Pass/Fail>
+
+  - If the score is 50 or greater, the result should be "Pass".
+  - If the score is less than 50, the result should be "Fail".
+
+Note: A partial code is provided in the editor.*/
+/////////////////////////////////////////////////////////////
+/*Logic: 50 or above passes.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int score = sc.nextInt();
+        String result = (score >= 50) ? "Pass" : "Fail";
+        System.out.println("Score: " + score + ", Result: " + result);
+        sc.close();
+    }
+}
