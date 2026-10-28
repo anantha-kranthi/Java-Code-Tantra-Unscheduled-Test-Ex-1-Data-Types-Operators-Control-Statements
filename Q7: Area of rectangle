@@ -1,0 +1,26 @@
+/*Q7.
+In the middle of a colorful forest, our Nature Explorer desires for a useful tool - a smart Forest Field Calculator. A rectangular field's dimensions are shared by the explorer in this whimsical program that aims to reveal the sanctuary's secrets. Then it computes the area, revealing the secrets of the forest with a hint of woodland magic.
+
+Now, imagine you're the creator of this Forest Field Calculator. Your mission is to guide the Nature Explorer in writing a Java program to achieve this calculator.
+
+Input format:
+  - The first line is a decimal value that represents the length of the rectangular field.
+  - The second line is a decimal value that represents the width of the rectangular field.
+
+Output format:
+  - The output is a decimal value that represents the area of the rectangular field.
+
+Note: A partial code is provided in the editor.*/
+///////////////////////////////////////////////////
+/*Logic: area = length x width.*/
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double length = sc.nextDouble();
+        double width = sc.nextDouble();
+        System.out.println(length * width);
+        sc.close();
+    }
+}
