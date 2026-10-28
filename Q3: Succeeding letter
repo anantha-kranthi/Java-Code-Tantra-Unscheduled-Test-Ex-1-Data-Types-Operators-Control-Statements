@@ -1,0 +1,26 @@
+/*Q3.
+Write a Java program that prompts the user to enter a letter of the alphabet and displays the succeeding letter in the alphabet series.
+
+Input Format:
+  - The input is a single letter from the alphabet series.
+
+Output Format:
+  - The output is the succeeding letter to the user-given letter.
+
+Note:
+  - The input character must be between letters A and Y (including) or a and y (including).
+  - A partial code is provided in the editor.*/
+/////////////////////////////////////////////////////////
+/*Logic: Letters are consecutive in ASCII/Unicode. Input is guaranteed A to Y or a to y, so there is no wrap-around.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+        char next = (char) (ch + 1);   // char arithmetic yields int, so cast back
+        System.out.println(next);
+        sc.close();
+    }
+}
