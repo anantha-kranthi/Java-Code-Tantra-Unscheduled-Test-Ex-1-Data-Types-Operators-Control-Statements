@@ -1,0 +1,40 @@
+/*Q1.
+You are developing a program to determine whether a person is eligible to vote based on their age and citizenship status.
+Write a Java program that accepts the person's age and citizenship status and determines their voting eligibility using the following rules:
+  - If the person is 18 years or older and is a citizen, print Eligible.
+  - If the person is under 18 years old, print Under Age, regardless of their citizenship status.
+  - If the person is 18 years or older but is not a citizen, print Citizenship Required.
+
+Input Format:
+1. The first line contains an integer representing the person's age.
+2. The second line contains a boolean value ("true" or "false") representing the person's citizenship status.
+  - true indicates that the person is a citizen.
+  - false indicates that the person is not a citizen.
+
+Output Format:
+Print exactly one of the following messages based on the given conditions:
+  - "Eligible" - if the person is 18 or older and is a citizen.
+  - "Under Age" - if the person is under 18 years old.
+  - "Citizenship Required" - if the person is 18 or older but is not a citizen.
+
+Note: A partial code is provided in the editor.*/
+///////////////////////////////////////////////////////////////////
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
+        boolean isCitizen = sc.nextBoolean();
+
+        if (age < 18) {
+            System.out.println("Under Age");              // age rule overrides citizenship
+        } else if (isCitizen) {
+            System.out.println("Eligible");
+        } else {
+            System.out.println("Citizenship Required");
+        }
+        sc.close();
+    }
+}
