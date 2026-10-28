@@ -1,0 +1,26 @@
+/*Q23.
+Deep within an ancient forest, Jahnvi sets off on a magical journey, following a mysterious map that points the way to a hidden treasure. As she arrives at the end of her quest, a magical door emerges, displaying a special number that holds the key to the long-lost treasure.
+
+To open the door, Jahnvi needs to figure out the last digit of this magical number. Your job is to write a Java program to help Jahnvi uncover this secret digit.
+
+Input Format:
+  - The input is the integer that represents the magical number.
+
+Output Format:
+  - The output is the integer that represents the last digit of the magical number.
+
+Note: A partial code is provided in the editor.
+*/
+///////////////////////////////////////////////////////////////////////
+/*Logic: % 10 gives the last digit. Math.abs keeps it non-negative for negative inputs (-47 gives 7).*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        System.out.println(Math.abs(num % 10));   // abs handles negative numbers
+        sc.close();
+    }
+}
