@@ -1,0 +1,32 @@
+/*Q20.
+Ava is developing a language processing tool and needs a program to identify whether a given character is a vowel or a consonant. Write a Java program that takes a single character as input and uses a ternary operator to determine and display whether the character is a vowel or a consonant.
+
+Input Format:
+  - The input is an alphabetical character in a lowercase.
+
+Output Format:
+  - Print the input character and whether it is a vowel or consonant in the following format:
+
+    Character: <character>, Result: <Vowel/Consonant>
+
+  - If the character is a, e, i, o, or u, the result should be "Vowel".
+  - Otherwise, the result should be "Consonant".
+
+Note: A partial code is provided in the editor.*/
+////////////////////////////////////////////////////////////////////////////
+/*Logic: A ternary operator selects between the two strings.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char ch = sc.next().charAt(0);
+
+        String result = (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+                ? "Vowel" : "Consonant";
+
+        System.out.println("Character: " + ch + ", Result: " + result);
+        sc.close();
+    }
+}
