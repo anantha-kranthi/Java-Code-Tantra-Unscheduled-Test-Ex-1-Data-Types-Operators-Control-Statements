@@ -1,0 +1,25 @@
+/*Q8.
+Explorers who want to go on exciting adventures rely on the Adventure Planner's Time Tracker, a magical tool that allows them to keep track of the minutes they spend on different portions of their missions. In the current edition, users are prompted to enter the duration of two adventure segments.
+
+The task is to add the times for these two segments and display the total time.
+
+Input format:
+  - The input consists of two integers representing the minutes spent on two adventure segments on a separate lines.
+
+Output format:
+  - The output is the integer that represents the total time.
+
+Note: A partial code is provided in the editor.*/
+//////////////////////////////////////////////////////
+/*Logic: Sum of the two integers.*/
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println(a + b);
+        sc.close();
+    }
+}
