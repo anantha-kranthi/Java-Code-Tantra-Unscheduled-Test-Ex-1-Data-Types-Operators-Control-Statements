@@ -1,0 +1,36 @@
+/*Q5.
+You are developing a program to validate if a given year is an Olympic year. Create a Java program that checks if a year entered by the user is a valid Olympic year.
+
+Your task is to write a Java program that takes a year as input and checks whether it is a valid Olympic year or not. A year is a valid Olympic year if it is divisible by 4.
+
+Input format:
+  - The input contains a single integer representing the year.
+
+Output format:
+The program displays whether the given year is a valid Olympic year in the following format:
+  - If the year is divisible by 4:
+
+    <year> is valid
+
+  - If the year is not divisible by 4:
+
+    <year> is not valid
+
+Note: A partial code is provided in the editor.*/
+////////////////////////////////////////////////////////////////////////////////
+/*Logic: Valid when divisible by 4.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int year = sc.nextInt();
+        if (year % 4 == 0) {
+            System.out.println(year + " is valid");
+        } else {
+            System.out.println(year + " is not valid");
+        }
+        sc.close();
+    }
+}
