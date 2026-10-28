@@ -1,0 +1,37 @@
+/*
+Q9.
+A bank wants to determine whether a person is eligible to apply for a credit card based on their annual income and credit score.
+
+Write a Java program that accepts the person's annual income and credit score and determines their eligibility using the following rules:
+  - If the annual income is at least $30,000 and the credit score is 700 or higher, print Eligible.
+  - Otherwise, print Not Eligible.
+
+Input Format:
+  - The first line contains an integer representing the person's annual income.
+  - The second line contains an integer representing the person's credit score.
+
+Output Format:
+Print:
+  - "Eligible" if the person satisfies both eligibility criteria.
+  - "Not Eligible" otherwise.
+
+Note: A partial code is provided in the editor.*/
+///////////////////////////////////////////////////////
+/*Logic: Both conditions must hold. Boundaries are inclusive (>=).*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int income = sc.nextInt();
+        int score = sc.nextInt();
+
+        if (income >= 30000 && score >= 700) {
+            System.out.println("Eligible");
+        } else {
+            System.out.println("Not Eligible");
+        }
+        sc.close();
+    }
+}
