@@ -1,0 +1,27 @@
+/*Q18.
+Picture yourself riding a bike through the bustling streets, but there's a little worry - your bike's speedometer is acting up, and you're not sure if you're keeping to the speed limit. Feeling a bit tense, you decide to create a simple tool - a Speed Checker. This tool only needs to know how long you've been biking (in seconds) and the distance covered (in meters). Can you write a quick Java program to calculate and display your biking speed?
+
+Hint: Speed = distance / time
+
+Input Format:
+  - The first line is a decimal value that represents the distance covered.
+  - The second line is a decimal value that represents the time spent biking.
+
+Output Format:
+  - The result is a decimal value that represents your biking speed in meters per second.
+
+Note: A partial code is provided in the editor.*/
+//////////////////////////////////////////////////////////////////////////
+/*Logic: speed = distance / time. Note the input order is distance first, then time (the opposite of Q4).*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double distance = sc.nextDouble();   // first line is distance
+        double time = sc.nextDouble();       // second line is time
+        System.out.println(distance / time);
+        sc.close();
+    }
+}
