@@ -1,0 +1,29 @@
+/*Q4.
+Imagine you're in a lively city, driving through the streets in a bit of a hurry. Suddenly, a thought pops up - how far have you gone so quickly? You quickly check your speed and peek at the clock to see how much time has passed. To make this easy, you decide to create a simple tool - a Distance Checker. This tool only needs to know how fast you're going (in meters per second) and how long you've been driving (in seconds). Can you write a quick Java program to calculate and show the distance covered during this speedy drive?
+
+Input Format:
+  - The first line is a decimal value that represents the speed.
+  - The second line is a decimal value that represents the time.
+
+Output Format:
+  - The output is a decimal value that represents the distance.
+
+Hint:
+  - Distance = speed x time
+
+Note: A partial code is provided in the editor.*/
+/////////////////////////////////////////////////////////////////////////////////
+/* Logic: Direct formula using double.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double speed = sc.nextDouble();
+        double time = sc.nextDouble();
+        double distance = speed * time;
+        System.out.println(distance);
+        sc.close();
+    }
+}
