@@ -1,0 +1,26 @@
+/*Q19.
+Emily and Alex, two undercover spies, need to exchange sensitive information securely. They've devised a method to encode their messages into binary strings and share them through a secure channel. To decode the messages, they perform XOR (exclusive OR) operations on the binary strings.
+
+Write a Java program to assist Emily and Alex in decoding their messages by performing XOR operations on binary strings.
+
+Input Format:
+  - The first two lines of the input are binary codes representing the encoded messages.
+
+Output Format:
+  - The output is an integer representing the result after performing the XOR operation.
+
+Note: A partial code is provided in the editor.*/
+//////////////////////////////////////////////////////////////////
+/*Logic: Same as Q15.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long a = Long.parseLong(sc.next().trim(), 2);
+        long b = Long.parseLong(sc.next().trim(), 2);
+        System.out.println(a ^ b);
+        sc.close();
+    }
+}
