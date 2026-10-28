@@ -1,0 +1,24 @@
+/*Q26.
+Zoe, a software engineer, is working on a home automation project where each device is represented by a unique binary code. The common features shared by two devices are identified by performing the bit wise AND operation on two devices. Can you help Zoe in writing the Java program to find the common features shared by two devices.
+
+Input Format:
+  - The first and second lines are the binary codes.
+
+Output Format:
+  - The output is the integer that represents the common features after performing the bit wise AND operation.
+
+Note: A partial code is provided in the editor.*/
+/////////////////////////////////////////////////////////////////////
+/*Logic: Same as Q15 with &.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long a = Long.parseLong(sc.next().trim(), 2);
+        long b = Long.parseLong(sc.next().trim(), 2);
+        System.out.println(a & b);
+        sc.close();
+    }
+}
