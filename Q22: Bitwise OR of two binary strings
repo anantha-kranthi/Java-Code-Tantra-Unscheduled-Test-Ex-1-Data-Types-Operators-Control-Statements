@@ -1,0 +1,25 @@
+/*Q22.
+In a futuristic smart city, there's a network of smart devices with unique functionalities represented by binary flags. Engineers need to combine the functionalities of two devices to create new, advanced features. Write a program to perform the bitwise OR operation on binary codes representing these devices' functionalities.
+
+Input Format:
+  - The first line of the input contains the binary code of the first device.
+  - The second line of the input contains the binary code of the second device.
+
+Output Format:
+  - The output is the integer that represents the device functionalities after performing OR operation.
+
+Note: A partial code is provided in the editor.*/
+/////////////////////////////////////////////////////////////////////////
+/*Logic: Same as Q15 with |.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long a = Long.parseLong(sc.next().trim(), 2);
+        long b = Long.parseLong(sc.next().trim(), 2);
+        System.out.println(a | b);
+        sc.close();
+    }
+}
