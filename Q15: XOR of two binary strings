@@ -1,0 +1,25 @@
+/*Q15.
+Emily and Alex are secret agents exchanging messages. They've encoded their messages into binary strings to keep them secure. To decode the two messages one must perform XOR operation on two binary strings. Write a program to help them to decode the messages.
+
+Input Format:
+  - The first line of the input contains the binary code of the first message.
+  - The second line of the input contains the binary code of the second message.
+
+Output Format:
+  - The output displays the integer obtained after performing the bitwise XOR operation on the two input integers.
+
+Note: A partial code is provided in the editor.*/
+//////////////////////////////////////////////////////
+/*Logic: Parse each string as binary, XOR them and print the decimal result. long avoids overflow on long strings.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long a = Long.parseLong(sc.next().trim(), 2);   // parse as base 2
+        long b = Long.parseLong(sc.next().trim(), 2);
+        System.out.println(a ^ b);
+        sc.close();
+    }
+}
