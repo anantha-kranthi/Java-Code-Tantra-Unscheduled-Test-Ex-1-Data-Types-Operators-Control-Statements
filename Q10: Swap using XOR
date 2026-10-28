@@ -1,0 +1,31 @@
+/*Q10.
+Chloe is developing a memory-efficient algorithm for a resource-constrained environment. She needs to swap values of two variables without using additional memory. Write a program that uses Bitwise XOR to swap two numbers, aiding Chloe in conserving valuable memory.
+
+Input Format:
+  - The two lines of the input are the integers that need to be swapped.
+
+Output Format:
+  - Print the swapped values in the following format:
+
+    Num1: <swapped value of num1>, Num2: <swapped value of num2>
+
+Note: A partial code is provided in the editor.*/
+///////////////////////////////////////////////////////
+/*Logic: Three XORs swap the values without a temporary variable.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+
+        num1 = num1 ^ num2;
+        num2 = num1 ^ num2;   // (a^b)^b = a
+        num1 = num1 ^ num2;   // (a^b)^a = b
+
+        System.out.println("Num1: " + num1 + ", Num2: " + num2);
+        sc.close();
+    }
+}
