@@ -1,0 +1,61 @@
+/*Q13.
+Note: This question appeared in the Recruitment/Technical Interviews of BankBazaar, Cognizant, and Linkedin, Year 2020.
+
+You are developing a ticket pricing system for a movie theater. Create a Java program that calculates the ticket price based on the age of the moviegoer.
+
+Your task is to write a Java program that takes the age of a moviegoer as input and calculates the ticket price according to the following criteria:
+
+    Age 0-5                Free
+    Age 6-12 (Child ticket)    $5
+    Age 13-18 (Teen ticket)    $8
+    Age 19-60 (Adult ticket)   $12
+    Age 61 and above (Senior ticket)   $6
+
+Input format:
+  - The program prompts the user to enter the age of the moviegoer.
+  - The input is an integer representing the moviegoer's age.
+  - The input should be provided after the following prompt:
+
+    Enter the age of the moviegoer:
+
+Output format:
+The program displays the calculated ticket price in the following format:
+
+    Ticket Price: $<ticket price>
+
+The ticket price is determined based on the moviegoer's age:
+  - Age 0-5: $0.0
+  - Age 6-12: $5.0
+  - Age 13-18: $8.0
+  - Age 19-60: $12.0
+  - Age 61 and above: $6.0
+
+Note: A partial code is provided in the editor.*/
+///////////////////////////////////////////////////////////////
+/*Logic: Range checks in ascending order. The prompt uses print (no newline). Prices print as 0.0, 5.0 and so on, matching the problem's listed values.*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the age of the moviegoer: ");
+        int age = sc.nextInt();
+
+        double price;
+        if (age <= 5) {
+            price = 0.0;
+        } else if (age <= 12) {
+            price = 5.0;
+        } else if (age <= 18) {
+            price = 8.0;
+        } else if (age <= 60) {
+            price = 12.0;
+        } else {
+            price = 6.0;
+        }
+
+        System.out.println("Ticket Price: $" + price);
+        sc.close();
+    }
+}
