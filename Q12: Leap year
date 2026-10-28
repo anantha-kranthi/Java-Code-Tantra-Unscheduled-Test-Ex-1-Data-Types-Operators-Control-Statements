@@ -1,0 +1,38 @@
+/*Q12.
+Sophia, a software developer, is working on a calendar application where accurate identification of leap years is crucial. She needs a program that efficiently checks whether a given year is a leap year. In the Gregorian calendar, a leap year is either divisible by 4 but not divisible by 100, or it is divisible by 400. Write a Java program that takes a year as input and determines whether the provided year is a leap year or not.
+
+Input Format:
+  - Single line contains an integer that represents the year
+
+Output Format:
+  - Single line displays whether the year is a leap year or not in the format: "<year> is Leap year" or "<year> is Not a leap year"
+
+Sample Test Case 1:
+
+    2024
+    2024 is Leap year
+
+Sample Test Case 2:
+
+    1953
+    1953 is Not a leap year
+
+Note: A partial code is provided in the editor.*/
+/////////////////////////////////////////////////////////////////////
+/*Logic: Gregorian rule: divisible by 4 but not by 100, or divisible by 400. Note the exact text "Leap year" and "Not a leap year".*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int year = sc.nextInt();
+
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+            System.out.println(year + " is Leap year");
+        } else {
+            System.out.println(year + " is Not a leap year");
+        }
+        sc.close();
+    }
+}
